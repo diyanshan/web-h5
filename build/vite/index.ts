@@ -24,15 +24,22 @@ const AUTO_IMPORT_INCLUDE = [
   /\.vue$/,
   /\.vue\?vue/,
 ]
+const MAIN_APP_ROUTE_EXCLUDE = [
+  'src/pages/login/**',
+  'src/pages/register/**',
+  'src/pages/forgot-password/**',
+]
 
-export function createVitePlugins(mode: string) {
+export function createVitePlugins(mode: string, command: 'serve' | 'build') {
   const env = loadEnv(mode, process.cwd())
 
   return [
     VueRouter({
       extensions: ['.vue'],
       routesFolder: 'src/pages',
+      exclude: MAIN_APP_ROUTE_EXCLUDE,
       dts: 'src/types/route-map.d.ts',
+      watch: command === 'serve',
     }),
 
     vue(),

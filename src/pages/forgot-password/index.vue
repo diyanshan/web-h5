@@ -43,7 +43,7 @@ async function reset() {
 
     if (res.code === 0) {
       showNotify({ type: 'success', message: t('forgotPassword.passwordResetSuccess') })
-      router.push({ name: 'Login' })
+      router.push('/login')
     }
   }
   finally {

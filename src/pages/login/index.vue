@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-import type { RouteMap } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useUserStore } from '@/stores'
 
 import logo from '~/images/logo.svg'
 import logoDark from '~/images/logo-dark.svg'
 import vw from '@/utils/inline-px-to-vw'
+import { resolveMainRedirectPath, toMainPage } from '@/utils/page-navigation'
 
 const { t } = useI18n()
-const router = useRouter()
+const route = useRoute()
 const userStore = useUserStore()
 const loading = ref(false)
 
@@ -39,12 +39,20 @@ async function login(values: any) {
   try {
     loading.value = true
     await userStore.login({ ...postData, ...values })
-    const { redirect, ...othersQuery } = router.currentRoute.value.query
-    router.push({
-      name: (redirect as keyof RouteMap) || 'Home',
-      query: {
-        ...othersQuery,
-      },
+    const { redirect, ...othersQuery } = route.query
+    const query = Object.fromEntries(
+      Object.entries(othersQuery)
+        .map(([key, value]) => {
+          if (Array.isArray(value))
+            return [key, value[0]]
+
+          return [key, value]
+        })
+        .filter(([, value]) => value !== null && value !== undefined),
+    )
+
+    toMainPage(resolveMainRedirectPath(redirect as string | null | undefined), {
+      ...query,
     })
   }
   finally {

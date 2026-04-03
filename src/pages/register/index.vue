@@ -47,7 +47,7 @@ async function register() {
 
     if (res.code === 0) {
       showNotify({ type: 'success', message: t('register.registerSuccess') })
-      router.push({ name: 'Login' })
+      router.push('/login')
     }
   }
   finally {

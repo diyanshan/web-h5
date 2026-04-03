@@ -4,16 +4,17 @@ import { loadEnv } from 'vite'
 import type { ConfigEnv, UserConfig } from 'vite'
 import { createVitePlugins } from './build/vite'
 import { exclude, include } from './build/vite/optimize'
+import { getHtmlInputs } from './build/vite/pages'
 
 const API_PREFIX_RE = /^\/api/
 
-export default ({ mode }: ConfigEnv): UserConfig => {
+export default ({ mode, command }: ConfigEnv): UserConfig => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
 
   return {
     base: env.VITE_APP_PUBLIC_PATH,
-    plugins: createVitePlugins(mode),
+    plugins: createVitePlugins(mode, command),
 
     server: {
       host: true,
@@ -37,9 +38,12 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     },
 
     build: {
-      cssCodeSplit: false,
+      cssCodeSplit: true,
       chunkSizeWarningLimit: 2048,
       outDir: env.VITE_APP_OUT_DIR || 'dist',
+      rollupOptions: {
+        input: getHtmlInputs(),
+      },
     },
 
     optimizeDeps: { include, exclude },

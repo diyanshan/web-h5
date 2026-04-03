@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import router from '@/router'
 import { useUserStore } from '@/stores'
 import defaultAvatar from '@/assets/images/default-avatar.svg'
+import { toAuthPage } from '@/utils/page-navigation'
 
 const userStore = useUserStore()
 const userInfo = computed(() => userStore.userInfo)
@@ -11,7 +11,7 @@ function login() {
   if (isLogin.value)
     return
 
-  router.push({ name: 'Login', query: { redirect: 'Profile' } })
+  toAuthPage('/login', { redirect: '/profile' })
 }
 </script>
 
