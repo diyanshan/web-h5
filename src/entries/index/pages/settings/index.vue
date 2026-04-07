@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { showConfirmDialog } from 'vant'
 import router from '@/router'
-import { useUserStore } from '@/stores'
+import { useUserStore } from '@/entries/index/stores'
 import { version } from '~root/package.json'
 
 const { t } = useI18n()

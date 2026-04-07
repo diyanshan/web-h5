@@ -1,7 +1,7 @@
 import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import { showNotify } from 'vant'
-import { STORAGE_TOKEN_KEY } from '@/stores/mutation-type'
+import { STORAGE_TOKEN_KEY } from '@/constants/storage'
 
 // 这里是用于设定请求后端时，所用的 Token KEY
 // 可以根据自己的需要修改，常见的如 Access-Token，Authorization

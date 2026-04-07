@@ -1,31 +1,3 @@
-<div id="top" align="center">
-
-<img src="https://cdn.jsdelivr.net/gh/vue-zone/static/cover.png" alt="cover" />
-
-<h1 align="center">vue3-vant-mobile</h1>
-
-[English](./README.md) / 简体中文
-
-An mobile web apps template based on the Vue 3 ecosystem.
-
-一个基于 Vue 3 生态系统的移动 web 应用模板，帮助你快速完成业务开发。
-
-<p>
-<img src="https://img.shields.io/github/license/vue-zone/vue3-vant-mobile" alt="license" />
-<img src="https://img.shields.io/github/package-json/v/vue-zone/vue3-vant-mobile" alt="version" />
-<img src="https://img.shields.io/github/repo-size/vue-zone/vue3-vant-mobile" alt="repo-size" />
-<img src="https://img.shields.io/github/languages/top/vue-zone/vue3-vant-mobile" alt="languages" />
-<img src="https://img.shields.io/github/issues-closed/vue-zone/vue3-vant-mobile" alt="issues" />
-</p>
-
-[🌐预览](https://vue3-vant-mobile.netlify.app) / [📖文档](https://vue-zone.github.io/docs/vue3-vant-mobile/) / [🗨️交流](https://github.com/vue-zone/vue3-vant-mobile/issues/56) / [📝反馈](https://github.com/vue-zone/vue3-vant-mobile/issues)
-
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/vue-zone/vue3-vant-mobile) [![Netlify Status](https://api.netlify.com/api/v1/badges/e6828bd2-2904-4c3e-a67c-b97d32aa1275/deploy-status)](https://app.netlify.com/sites/vue3-vant-mobile/deploys)
-
-</div>
-
-<br>
-
 ## Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 8](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/) - 就是快！
@@ -117,33 +89,7 @@ An mobile web apps template based on the Vue 3 ecosystem.
 
 ## 现在可以试试
 
-> vue3-vant-mobile 需要 Node 版本 20.19+
-
-### GitHub 模板
-
-[使用这个模板创建仓库](https://github.com/vue-zone/vue3-vant-mobile/generate)
-
-### 克隆到本地
-
-如果您更喜欢使用更干净的 git 历史记录手动执行此操作
-
-```bash
-pnpm dlx tiged vue-zone/vue3-vant-mobile my-mobile-app # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
-cd my-mobile-app
-pnpm i
-```
-
-## 清单
-
-使用此模板时，请尝试按照清单正确更新您自己的信息
-
-- [ ] 在 `LICENSE` 中改变作者名
-- [ ] 在 `index.html` 中改变标题
-- [ ] 在 `vite.config.ts` 更改主机名
-- [ ] 在 `public` 目录下改变favicon
-- [ ] 整理 README 并删除路由
-
-紧接着, 享受吧 :)
+> 需要 Node 版本 20.19+
 
 ## 使用
 

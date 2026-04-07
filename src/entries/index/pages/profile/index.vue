@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores'
+import { useUserStore } from '@/entries/index/stores'
 import defaultAvatar from '@/assets/images/default-avatar.svg'
 import { toAuthPage } from '@/utils/page-navigation'
 

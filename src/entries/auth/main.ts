@@ -30,6 +30,4 @@ app.use(router)
 app.use(pinia)
 app.use(i18n)
 
-console.log(1212)
-
 app.mount('#app')

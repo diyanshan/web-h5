@@ -48,6 +48,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    'ForgotPassword': RouteRecordInfo<
+      'ForgotPassword',
+      '/forgot-password',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     'Home': RouteRecordInfo<
       'Home',
       '/home',
@@ -62,6 +69,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    'Login': RouteRecordInfo<
+      'Login',
+      '/login',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     'Mock': RouteRecordInfo<
       'Mock',
       '/mock',
@@ -72,6 +86,13 @@ declare module 'vue-router/auto-routes' {
     'Profile': RouteRecordInfo<
       'Profile',
       '/profile',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    'Register': RouteRecordInfo<
+      'Register',
+      '/register',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -110,61 +131,79 @@ declare module 'vue-router/auto-routes' {
    * @internal
    */
   export interface _RouteFileInfoMap {
-    'src/pages/[...all].vue': {
+    'src/entries/index/pages/[...all].vue': {
       routes:
         | '404'
       views:
         | never
     }
-    'src/pages/charts/index.vue': {
+    'src/entries/index/pages/charts/index.vue': {
       routes:
         | 'Charts'
       views:
         | never
     }
-    'src/pages/counter/index.vue': {
+    'src/entries/index/pages/counter/index.vue': {
       routes:
         | 'Counter'
       views:
         | never
     }
-    'src/pages/home.vue': {
+    'src/entries/auth/pages/forgot-password/index.vue': {
+      routes:
+        | 'ForgotPassword'
+      views:
+        | never
+    }
+    'src/entries/index/pages/home.vue': {
       routes:
         | 'Home'
       views:
         | never
     }
-    'src/pages/keepalive/index.vue': {
+    'src/entries/index/pages/keepalive/index.vue': {
       routes:
         | 'KeepAlive'
       views:
         | never
     }
-    'src/pages/mock/index.vue': {
+    'src/entries/auth/pages/login/index.vue': {
+      routes:
+        | 'Login'
+      views:
+        | never
+    }
+    'src/entries/index/pages/mock/index.vue': {
       routes:
         | 'Mock'
       views:
         | never
     }
-    'src/pages/profile/index.vue': {
+    'src/entries/index/pages/profile/index.vue': {
       routes:
         | 'Profile'
       views:
         | never
     }
-    'src/pages/scroll-cache/index.vue': {
+    'src/entries/auth/pages/register/index.vue': {
+      routes:
+        | 'Register'
+      views:
+        | never
+    }
+    'src/entries/index/pages/scroll-cache/index.vue': {
       routes:
         | 'ScrollCache'
       views:
         | never
     }
-    'src/pages/settings/index.vue': {
+    'src/entries/index/pages/settings/index.vue': {
       routes:
         | 'Settings'
       views:
         | never
     }
-    'src/pages/unocss/index.vue': {
+    'src/entries/index/pages/unocss/index.vue': {
       routes:
         | 'UnoCSS'
       views:

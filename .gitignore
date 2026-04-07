@@ -8,8 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
-web
+Ishare
+ishare
 dist-ssr
 *.local
 stats.html
@@ -26,3 +26,4 @@ stats.html
 # Misc
 .DS_Store
 .history
+node_modules

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useRouteCacheStore } from '@/stores'
+import { useRouteCacheStore } from '@/entries/index/stores'
 
 const { t } = useI18n()
 

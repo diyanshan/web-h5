@@ -14,7 +14,7 @@ const show = computed(() => {
 
 <template>
   <van-tabbar v-if="show" v-model="active" route placeholder>
-    <van-tabbar-item replace to="/">
+    <van-tabbar-item replace to="/home">
       {{ $t('tabbar.home') }}
       <template #icon>
         <div class="i-carbon:home" />

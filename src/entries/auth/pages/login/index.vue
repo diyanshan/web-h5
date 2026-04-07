@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { useUserStore } from '@/stores'
+import { useUserStore } from '@/entries/auth/stores'
 
 import logo from '~/images/logo.svg'
 import logoDark from '~/images/logo-dark.svg'

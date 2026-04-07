@@ -1,9 +1,9 @@
 {
-  "name": "vue3-vant-mobile",
+  "name": "ihare",
   "type": "module",
-  "version": "3.15.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.32.1",
-  "description": "An mobile web apps template based on the Vue 3 ecosystem",
+  "description": "Vue 3 H5",
   "license": "MIT",
   "engines": {
     "node": ">=20.19.0"

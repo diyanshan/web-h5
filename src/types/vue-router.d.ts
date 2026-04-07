@@ -4,6 +4,8 @@ declare module 'vue-router' {
     title?: string
     /** keepalive */
     keepAlive?: boolean
+    /** entry namespace */
+    entry?: 'index' | 'auth'
   }
 }
 export {}

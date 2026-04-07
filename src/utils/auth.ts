@@ -1,4 +1,4 @@
-import { STORAGE_TOKEN_KEY } from '@/stores/mutation-type'
+import { STORAGE_TOKEN_KEY } from '@/constants/storage'
 import { useLocalStorage } from '@vueuse/core'
 
 const token = useLocalStorage(STORAGE_TOKEN_KEY, '')
